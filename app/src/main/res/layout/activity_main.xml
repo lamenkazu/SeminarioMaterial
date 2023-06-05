@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        style="@style/Widget.Material3.LinearProgressIndicator"
+        android:id="@+id/linear_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+
+
+        android:indeterminate="true"
+        android:paddingHorizontal="20dp"
+        android:layout_centerHorizontal="true"
+
+        app:trackThickness="20dp"
+        app:trackCornerRadius="100dp"
+        app:trackColor="@color/white"
+
+        app:indicatorColor="@color/teal_700"
+        app:indicatorDirectionLinear="endToStart"
+
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/lbl_percent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:layout_below="@id/linear_indicator"
+
+        android:textSize="40dp"
+        android:text=""
+
+        />
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/circular_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:indeterminate="true"
+        app:indicatorColor="@color/teal_700"
+
+        app:trackCornerRadius="3dp"
+        app:trackThickness="10dp"
+        app:trackColor="@color/white"
+
+        app:indicatorSize="100dp"
+        app:indicatorDirectionCircular="counterclockwise"
+
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/lbl_percent"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/circular_indicator"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+
+        android:text="Progredir"
+        android:textSize="30dp"
+        android:backgroundTint="@color/teal_700"
+        android:shadowColor="@color/white"
+        />
+
+
+
+</RelativeLayout>
